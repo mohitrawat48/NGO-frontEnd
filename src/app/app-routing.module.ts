@@ -8,7 +8,7 @@ import { DonationlistComponent } from './donationlist/donationlist.component';
 import { CreateComponent } from './create/create.component';
 const routes: Routes = [
   { path: "", component: LoginComponent },
-  { path: "/user", component: UserpageComponent }
+  { path: "/user", component: UserpageComponent },
   { path: 'applist', component: ApplistComponent },
   { path: 'donationlist', component: DonationlistComponent },
   { path: 'create', component: CreateComponent },
