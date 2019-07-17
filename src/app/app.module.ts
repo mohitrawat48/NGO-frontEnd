@@ -14,6 +14,15 @@ import { UserpageComponent } from "./userpage/userpage.component";
 import { AdminpageComponent } from "./adminpage/adminpage.component";
 import { LoginComponent } from "./login/login.component";
 
+
+
+import { AdminService} from 'src/app/adminservice';
+import { DonateService } from 'src/app/donateservice';
+//import { PopupModule } from 'ng2-opd-popup';
+import { ApplistComponent } from './applist/applist.component';
+import { DonationlistComponent } from './donationlist/donationlist.component';
+import { CreateComponent } from './create/create.component';
+
 export function tokenGetter() {
   return localStorage.getItem("access_token");
 }
@@ -23,7 +32,10 @@ export function tokenGetter() {
     AppComponent,
     UserpageComponent,
     AdminpageComponent,
-    LoginComponent
+    LoginComponent,
+    ApplistComponent,
+    DonationlistComponent,
+    CreateComponent
   ],
   imports: [
     BrowserModule,
@@ -38,7 +50,8 @@ export function tokenGetter() {
       }
     })
   ],
-  providers: [AuthService, AuthGuard],
+  providers: [AuthService, AuthGuard, AdminService,
+    DonateService],
   bootstrap: [AppComponent]
 })
 export class AppModule {}
