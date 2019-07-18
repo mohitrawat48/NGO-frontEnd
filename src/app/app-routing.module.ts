@@ -4,7 +4,9 @@ import { LoginComponent } from "./login/login.component";
 import { UsermgmtComponent } from "./user-mgmt/user-mgmt.component";
 import { DonationmgmtComponent } from "./donation-mgmt/donation-mgmt.component";
 import { CreateComponent } from './create/create.component';
-const routes: Routes = [{ path: "", component: LoginComponent },
+import {RegisterComponent} from "./register/register.component"
+const routes: Routes = [ { path:"Login", component:LoginComponent},
+{ path:"register", component:RegisterComponent},
   { path: 'user-mgmt', component: UsermgmtComponent },
   { path: 'donation-mgmt', component: DonationmgmtComponent },
   { path: 'create', component: CreateComponent },

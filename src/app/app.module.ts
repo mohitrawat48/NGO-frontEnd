@@ -22,6 +22,9 @@ import { DonateService } from './donateservice';
 import { AdminService} from 'src/app/adminservice';
 import { CreateComponent } from './create/create.component';
 
+import { ReactiveFormsModule } from '@angular/forms';
+
+
 export function tokenGetter() {
   return localStorage.getItem("access_token");
 }
@@ -38,9 +41,9 @@ export function tokenGetter() {
     UserViewComponent,
     UserCartComponent,
     OrderConfirmComponent,
-    CreateComponent
+    CreateComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule],
+  imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule, ReactiveFormsModule],
   providers: [AuthService, AuthGuard, AdminService, DonateService],
   bootstrap: [AppComponent]
 })
