@@ -1,7 +1,6 @@
 import { BrowserModule } from "@angular/platform-browser";
 import { NgModule } from "@angular/core";
 
-import { JwtModule } from "@auth0/angular-jwt";
 import { HttpClientModule } from "@angular/common/http";
 import { FormsModule } from "@angular/forms";
 
@@ -13,31 +12,22 @@ import { AppComponent } from "./app.component";
 import { UserpageComponent } from "./userpage/userpage.component";
 import { AdminpageComponent } from "./adminpage/adminpage.component";
 import { LoginComponent } from "./login/login.component";
+import { AdminUserComponent } from './admin-user/admin-user.component';
+import { NonAdminUserComponent } from './non-admin-user/non-admin-user.component';
+import { RegisterComponent } from './register/register.component';
+import { DonationMgmtComponent } from './donation-mgmt/donation-mgmt.component';
+import { UserMgmtComponent } from './user-mgmt/user-mgmt.component';
+import { UserViewComponent } from './user-view/user-view.component';
+import { UserCartComponent } from './user-cart/user-cart.component';
+import { OrderConfirmComponent } from './order-confirm/order-confirm.component';
 
 export function tokenGetter() {
   return localStorage.getItem("access_token");
 }
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    UserpageComponent,
-    AdminpageComponent,
-    LoginComponent
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    HttpClientModule,
-    FormsModule,
-    JwtModule.forRoot({
-      config: {
-        tokenGetter: tokenGetter,
-        whitelistedDomains: ["localhost:4000"]
-        //mgblacklistedRoutes: ["localhost:4000/api/auth"]
-      }
-    })
-  ],
+  declarations: [AppComponent, LoginComponent, AdminUserComponent, NonAdminUserComponent, RegisterComponent, DonationMgmtComponent, UserMgmtComponent, UserViewComponent, UserCartComponent, OrderConfirmComponent],
+  imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule],
   providers: [AuthService, AuthGuard],
   bootstrap: [AppComponent]
 })
