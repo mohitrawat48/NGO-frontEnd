@@ -1,0 +1,18 @@
+<form>
+    <div class="form-group">
+        <label for="firstName">First Name</label>
+        <input reqiured ngModel name="firstName" #firstName="ngModel" (change)="log(firstName)" id="firstName" type="text" class="form-control">
+        <div class="alert alert-danger" *ngIf="!firstName.valid">First Name is required.</div>
+        <label for="lastName">Last Name</label>
+        <input id="lastName" type="text" class="form-control">
+        <label for="email">Email</label>
+        <input id="email" type="text" class="form-control">
+        <label for="password">Password</label>
+        <input id="password" type="text" class="form-control">
+        <label for="role">Role</label>
+        <input id="role" type="text" class="form-control">
+
+    </div>
+    <button class="btn btn-primary" routerLink="/applist">Back</button>
+    <button class="btn btn-primary">Submit</button>
+</form>

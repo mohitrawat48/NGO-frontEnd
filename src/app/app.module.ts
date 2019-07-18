@@ -20,6 +20,7 @@ import { UserCartComponent } from "./user-cart/user-cart.component";
 import { OrderConfirmComponent } from "./order-confirm/order-confirm.component";
 import { DonateService } from './donateservice';
 import { AdminService} from 'src/app/adminservice';
+import { CreateComponent } from './create/create.component';
 
 export function tokenGetter() {
   return localStorage.getItem("access_token");
@@ -36,7 +37,8 @@ export function tokenGetter() {
     UsermgmtComponent,
     UserViewComponent,
     UserCartComponent,
-    OrderConfirmComponent
+    OrderConfirmComponent,
+    CreateComponent
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule],
   providers: [AuthService, AuthGuard, AdminService, DonateService],
