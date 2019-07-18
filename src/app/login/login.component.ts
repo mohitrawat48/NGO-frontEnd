@@ -7,7 +7,7 @@ import { FormsModule } from "@angular/forms";
 })
 export class LoginComponent implements OnInit {
   constructor() {}
-  public hello: String = "Hello";
+  public hello: String = "Hello july";
 
   ngOnInit() {}
 }
