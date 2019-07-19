@@ -1,8 +1,8 @@
-<form #login_form (ngSubmit)="onSubmit(Login_form)">
+<form #login_form="ngForm" (ngSubmit)="onSubmit(login_form.value)">
   <h1>Login</h1>
   <label for="user_email">Email:</label>
-  <input type="text" name="user_email" />
+  <input type="text" name="user_email" ngModel />
   <label for="user_password">Password:</label>
-  <input type="text" name="user_password" />
+  <input type="text" name="user_password" ngModel />
   <input type="submit" value="Submit" />
 </form>
