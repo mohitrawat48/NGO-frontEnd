@@ -5,8 +5,8 @@ import { Item } from '../entities/item.entity';
 import { DonationService } from '../donation.service';
 
 @Component({
-	templateUrl: 'cart.component.html',
-	styleUrls: ['./cart.component.css']
+	templateUrl: 'user-cart.component.html',
+	styleUrls: ['./user-cart.component.css']
 })
 
 export class UserCartComponent implements OnInit {
