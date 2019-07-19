@@ -2,6 +2,8 @@ import { Component, OnInit } from "@angular/core";
 import { AuthService } from "../auth.service";
 import { login_model } from "../login_model";
 import { error } from "@angular/compiler/src/util";
+import { FormControl } from "@angular/forms";
+
 @Component({
   selector: "app-login",
   templateUrl: "./login.component.html",
@@ -21,5 +23,15 @@ export class LoginComponent implements OnInit {
       data => console.log(data),
       error => console.log(error)
     );
+  }
+  email = new FormControl("");
+  password = new FormControl("");
+
+  updateEmail() {
+    this.email.setValue("ankit@appdividend.com");
+  }
+
+  updatePassword() {
+    this.password.setValue("123456");
   }
 }
