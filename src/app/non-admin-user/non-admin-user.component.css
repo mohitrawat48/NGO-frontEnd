@@ -1,101 +1,101 @@
 .nav-bar {
-    width: 100%;
-    background-color: #555;
-    overflow: auto;
-    margin-bottom: 10px;
-    font-family: "Segoe UI", Arial, sans-serif;
+  width: 100%;
+  background-color: #555;
+  overflow: auto;
+  margin-bottom: 10px;
+  font-family: "Segoe UI", Arial, sans-serif;
 }
 
 .nav-bar a {
-    float: left;
-    padding: 12px; 
-    color: white;
-    text-decoration: none;
-    font-size: 17px;
+  float: left;
+  padding: 12px;
+  color: white;
+  text-decoration: none;
+  font-size: 17px;
 }
 
 @media screen and (max-width: 500px) {
-    .nav-bar a {
-        float: none;
-        display: block;
-    }
+  .nav-bar a {
+    float: none;
+    display: block;
+  }
 }
 
 /*---------------------Logout Button-----------------------------*/
 .dropbtn {
-    background-color: darkred;
-    color: white;
-    padding: 16px;
-    font-size: 16px;
-    border: none;
-    cursor: pointer;
+  background-color: darkred;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
 }
 
 .dropbtn:hover,
 .dropbtn:focus {
-    background-color: #ddd;
+  background-color: #ddd;
 }
 
 .dropdown {
-    float: right;
-    position: relative;
-    display: block;
+  float: right;
+  position: relative;
+  display: block;
 }
 
 .dropbtn a:hover {
-    background-color: #ddd;
+  background-color: #ddd;
 }
 
 /*-------------------------Side Bar------------------------*/
 
 .side-bar {
-    background-color: lightgray;
-    color: black;
-    font-family: "Segoe UI", Arial, sans-serif;
-    width: 15%;
-    height: 100%;
-    float: left;
-    position: fixed;
+  background-color: lightgray;
+  color: black;
+  font-family: "Segoe UI", Arial, sans-serif;
+  width: 15%;
+  height: 100%;
+  float: left;
+  position: fixed;
 }
 
 .side-bar a {
-    background-color: transparent;
-    color: inherit;
-    text-decoration: none;
-    display: block;
-    padding: 2px 1px 1px 16px;
+  background-color: transparent;
+  color: inherit;
+  text-decoration: none;
+  display: block;
+  padding: 2px 1px 1px 16px;
 }
 
 .side-bar a:hover {
-    background-color: gray;
+  background-color: gray;
 }
 
 .side-bar a:active {
-    background-color: darkred;
+  background-color: darkred;
 }
 
 .side-bar h1 {
-    text-align: center;
-    font-size: medium;
+  text-align: center;
+  font-size: medium;
 }
 /*----------------------Content Section-----------------------------*/
 .content {
-    background-color: white;
-    color: black;
-    font-family: "Segoe UI", Arial, sans-serif;
-    width: 85%;
-    margin-left: 245px;
-    position: fixed;
+  background-color: white;
+  color: black;
+  font-family: "Segoe UI", Arial, sans-serif;
+  width: 85%;
+  margin-left: 245px;
+  position: fixed;
 }
 
 .content h1 {
-    background-color: lightgray;
+  background-color: lightgray;
 }
 
 .content a {
-    text-decoration: none;
-    color: inherit;
-    background: lightgray;
-    padding: 0px 5px 1px 5px;
-    border: 1px solid black;
+  text-decoration: none;
+  color: inherit;
+  background: lightgray;
+  padding: 0px 5px 1px 5px;
+  border: 1px solid black;
 }

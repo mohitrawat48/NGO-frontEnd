@@ -1,6 +1,7 @@
 import { Component, OnInit } from "@angular/core";
 import { AuthService } from "../auth.service";
 import { Router } from "@angular/router";
+import { PassUserInfoService } from "../pass-user-info.service";
 @Component({
   selector: "app-login",
   templateUrl: "./login.component.html",
@@ -9,7 +10,11 @@ import { Router } from "@angular/router";
 export class LoginComponent implements OnInit {
   public form_data: any = {};
 
-  constructor(private Auth_service: AuthService, private router: Router) {}
+  constructor(
+    private Auth_service: AuthService,
+    private router: Router,
+    private userinfoservice: PassUserInfoService
+  ) {}
 
   ngOnInit() {}
 
@@ -20,6 +25,7 @@ export class LoginComponent implements OnInit {
       data => {
         console.log(data);
         if (data["user_type"] == "non-admin") {
+          this.userinfoservice.save_data(data["full_name"], data["user_type"]);
           this.router.navigate(["/non-admin-user"]);
         } else {
           this.router.navigate(["/admin-user"]);
