@@ -3,13 +3,14 @@ import { Routes, RouterModule } from "@angular/router";
 import { LoginComponent } from "./login/login.component";
 import { UsermgmtComponent } from "./user-mgmt/user-mgmt.component";
 import { DonationmgmtComponent } from "./donation-mgmt/donation-mgmt.component";
-import { CreateComponent } from './create/create.component';
-import {RegisterComponent} from "./register/register.component"
-const routes: Routes = [ { path:"Login", component:LoginComponent},
-{ path:"register", component:RegisterComponent},
-  { path: 'user-mgmt', component: UsermgmtComponent },
-  { path: 'donation-mgmt', component: DonationmgmtComponent },
-  { path: 'create', component: CreateComponent },
+import { CreateComponent } from "./create/create.component";
+import { RegisterComponent } from "./register/register.component";
+const routes: Routes = [
+  { path: "", component: LoginComponent },
+  { path: "register", component: RegisterComponent },
+  { path: "user-mgmt", component: UsermgmtComponent },
+  { path: "donation-mgmt", component: DonationmgmtComponent },
+  { path: "create", component: CreateComponent }
 ];
 
 @NgModule({
@@ -18,6 +19,7 @@ const routes: Routes = [ { path:"Login", component:LoginComponent},
 })
 export class AppRoutingModule {}
 export const routingCompoents = [
-                              UsermgmtComponent,
-                              DonationmgmtComponent,
-                              CreateComponent];
+  UsermgmtComponent,
+  DonationmgmtComponent,
+  CreateComponent
+];
