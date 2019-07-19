@@ -1,1 +1,37 @@
-<p>user-cart works!</p>
+<h3>Cart Info</h3>
+<table border="1" width="75%">
+    <tr>
+        <th>Option</th>
+        <th style="display: none;">Id</th>
+        <th>Name</th>
+        <th></th> <!--Photo-->
+        <th>Amount</th>
+        <th>Quantity</th>
+        <th>Sub Total</th>
+    </tr>
+    <tr *ngFor="let item of items">
+        <td align="center">
+            <a [routerLink]="['/cart']" (click)="remove(item.donation.id)">Remove</a>
+        </td>
+        <td style="display: none;">{{item.donation.id}}</td>
+        <td>{{item.donation.name}}</td>
+        <td>
+            <img src="../../../assets/images/{{ item.donation.photo }}" width="50">
+        </td>
+        <td>{{item.donation.amount}}</td>
+        <td>{{item.quantity}}</td> <!--Input type number then update data-->
+        <td>{{item.donation.amount * item.quantity}}</td>
+    </tr>
+    <tr>
+        <td colspan="6" align="right">Total</td>
+        <td>{{total}}</td>
+    </tr>
+
+    <tr>
+        <td colspan="6" align="right"> </td>
+        <td>
+            <a href="">Checkout</a>
+        </td>
+    </tr>
+
+</table>

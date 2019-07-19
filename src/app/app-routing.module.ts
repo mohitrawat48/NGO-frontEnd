@@ -5,12 +5,14 @@ import { UsermgmtComponent } from "./user-mgmt/user-mgmt.component";
 import { DonationmgmtComponent } from "./donation-mgmt/donation-mgmt.component";
 import { CreateComponent } from "./create/create.component";
 import { RegisterComponent } from "./register/register.component";
+import {UserCartComponent} from "./user-cart/user-cart.component";
 const routes: Routes = [
   { path: "", component: LoginComponent },
   { path: "login", component: LoginComponent },
   { path: "register", component: RegisterComponent },
   { path: "user-mgmt", component: UsermgmtComponent },
   { path: "donation-mgmt", component: DonationmgmtComponent },
+  { path: 'cart', component: UserCartComponent },
   { path: "create", component: CreateComponent }
 ];
 

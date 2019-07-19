@@ -1,0 +1,21 @@
+<h3>Donation Types</h3>
+<table border="1" width="75%">
+    <tr>
+        <th style="display: none;">Id</th>
+        <th>Name</th>
+        <th></th> <!--Photo-->
+        <th>Amount</th>
+        <th>Donate</th>
+    </tr>
+    <tr *ngFor="let donation of donationtype">
+        <td style="display: none;">{{donation.id}}</td>
+        <td>{{donation.name}}</td>
+        <td>
+            <img src="../../../assets/images/{{ donation.photo }}" width="50">
+        </td>
+        <td>{{donation.amount}}</td> <!--Input type number then pass data to cart-->
+        <td>
+            <a [routerLink]="['/cart', { id:donation.id }]">Donate Now</a>
+        </td>
+    </tr>
+</table>
