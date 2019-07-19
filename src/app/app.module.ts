@@ -22,6 +22,8 @@ import { AdminService} from 'src/app/adminservice';
 import { CreateComponent } from './create/create.component';
 import { DonationComponent }from "./donation/donation.component";
 
+import { DonationService } from './donation.service';
+
 import { ReactiveFormsModule } from '@angular/forms';
 
 
@@ -44,7 +46,7 @@ export function tokenGetter() {
     DonationComponent
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule, ReactiveFormsModule],
-  providers: [AuthService, AuthGuard, AdminService, DonateService],
+  providers: [AuthService, AuthGuard, AdminService, DonateService, DonationService],
   bootstrap: [AppComponent]
 })
 export class AppModule {}
