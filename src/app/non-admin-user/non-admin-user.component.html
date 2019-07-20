@@ -19,12 +19,11 @@
 <!---------------------------Content Section--------------------------->
 <div class="content">
   <h1>Make a Donation</h1>
-
-  <div>
-    <a [routerLink]="['/donations']">Donation Types</a> |
-    <a [routerLink]="['/cart']">Cart</a>
+  <div class="add_left_space">
+    <a [routerLink]="['./donations']">Donation Types</a> |
+    <a [routerLink]="['./cart']">Cart</a>
     <br /><br />
 
-    <router-outlet name="donation-cart-outlet"></router-outlet>
+    <router-outlet></router-outlet>
   </div>
 </div>

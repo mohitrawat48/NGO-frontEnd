@@ -10,24 +10,32 @@ import { AdminUserComponent } from "./admin-user/admin-user.component";
 import { NonAdminUserComponent } from "./non-admin-user/non-admin-user.component";
 import { DonationComponent } from "./donation/donation.component";
 const routes: Routes = [
-  { path: "", component: LoginComponent },
+  { path: "", redirectTo: "login", pathMatch: "full" },
   { path: "login", component: LoginComponent },
   { path: "register", component: RegisterComponent },
   { path: "user-mgmt", component: UsermgmtComponent },
   { path: "donation-mgmt", component: DonationmgmtComponent },
-  {
-    path: "donations",
-    component: DonationComponent,
-    outlet: "donation-cart-outlet"
-  },
-  {
-    path: "cart",
-    component: UserCartComponent,
-    outlet: "donation-cart-outlet"
-  },
   { path: "create", component: CreateComponent },
   { path: "admin-user", component: AdminUserComponent },
-  { path: "non-admin-user", component: NonAdminUserComponent }
+  {
+    path: "non-admin-user",
+    component: NonAdminUserComponent,
+    children: [
+      {
+        path: "",
+        redirectTo: "donations",
+        pathMatch: "full"
+      },
+      {
+        path: "donations",
+        component: DonationComponent
+      },
+      {
+        path: "cart",
+        component: UserCartComponent
+      }
+    ]
+  }
 ];
 
 @NgModule({
