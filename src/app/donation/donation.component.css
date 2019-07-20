@@ -1,11 +1,11 @@
-a {
+/* a {
     text-decoration: none;
     background-color: lightgray;
     color: inherit;
     padding: 0px 5px 1px 5px;
     border: 1px solid black;
-}
+} */
 
 td {
-    text-align: center;
+  text-align: center;
 }

@@ -92,14 +92,6 @@
   background-color: lightgray;
 }
 
-.content a {
-  text-decoration: none;
-  color: inherit;
-  background: lightgray;
-  padding: 0px 5px 1px 5px;
-  border: 1px solid black;
-}
-
 .add_left_space {
   margin-left: 2%;
 }
