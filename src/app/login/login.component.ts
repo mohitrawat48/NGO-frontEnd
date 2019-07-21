@@ -24,8 +24,8 @@ export class LoginComponent implements OnInit {
     this.Auth_service.signin(this.form_data).subscribe(
       data => {
         console.log(data);
+        this.userinfoservice.save_data(data["full_name"], data["user_type"]);
         if (data["user_type"] == "non-admin") {
-          this.userinfoservice.save_data(data["full_name"], data["user_type"]);
           this.router.navigate(["/non-admin-user"]);
         } else {
           this.router.navigate(["/admin-user"]);

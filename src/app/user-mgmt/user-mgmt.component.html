@@ -1,36 +1,23 @@
-<div class="nav-bar">
-    <a> NGO</a> 
-
-  <div class="dropdown">
-      <a> Full Name(ADMIN)</a>
-      <a class="dropbtn" href="">Logout</a>
-  </div> 
-</div>
-
-<div class="side-bar">
-
-  <a routerLink="/user-mgmt" routerLinkActive="active">User Management</a>
-  <a routerLink="/donation-mgmt" routerLinkActive="active">Donation Management</a>
-  <a routerLink="/user-view" routerLinkActive="active">User View</a>
-</div>
 <div class="content">
-<table class="table">
+  <table class="table">
     <thead>
-      <td>First Name</td>    
+      <td>First Name</td>
       <td>Last Name</td>
       <td>Email</td>
       <td>Role</td>
       <td><a routerLink="/create" routerLinkActive="active">create</a></td>
     </thead>
     <tbody>
-    <tr *ngFor="let item of admin">
-      <td>{{item.FirstName}}</td>
-      <td>{{item.LastName}}</td>
-      <td>{{item.Email}}</td>
-      <td>{{item.Role}}</td>
-      <td><a routerLink="/edit" routerLinkActive="active">edit</a></td>
-      <td><a routerLink="/delete" routerLinkActive="active">delete</a></td>
-    </tr>
-      <tbody>
+      <tr *ngFor="let item of admin">
+        <td>{{ item.FirstName }}</td>
+        <td>{{ item.LastName }}</td>
+        <td>{{ item.Email }}</td>
+        <td>{{ item.Role }}</td>
+        <td><a routerLink="/edit" routerLinkActive="active">edit</a></td>
+        <td><a routerLink="/delete" routerLinkActive="active">delete</a></td>
+      </tr>
+    </tbody>
+
+    <tbody></tbody>
   </table>
 </div>

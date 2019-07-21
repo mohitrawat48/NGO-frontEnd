@@ -1,35 +1,19 @@
-<div class="nav-bar">
-    <a> NGO</a> 
-
-  <div class="dropdown">
-      <a> Full Name(ADMIN)</a>
-      <a class="dropbtn" href="">Logout</a>
-  </div> 
-</div>
-
-<div class="side-bar">
-
-  <a routerLink="/user-mgmt" routerLinkActive="active">User Management</a>
-  <a routerLink="/donation-mgmt" routerLinkActive="active">Donation Management</a>
-  <a routerLink="/user-view" routerLinkActive="active">User View</a>
-</div>
 <div class="content">
-<table class="table">
+  <table class="table">
     <thead>
-      <td></td>
-      <td>Name</td>    
-      <td>Date</td>
-      <td>Amount</td>
-      <td>Donation Type</td>
+      <th>Name</th>
+      <th>Date</th>
+      <th>Amount</th>
     </thead>
     <tbody>
-    <tr *ngFor="let item of donate">
-      <td></td>
-      <td>{{item.Name}}</td>
-      <td>{{item.Date}}</td>
-      <td>{{item.Amount}}</td>
-      <td>{{item.DonationType}}</td>
-    </tr>
-      <tbody>
+      <tr *ngFor="let item of donate">
+        <td></td>
+        <td>{{ item.Name }}</td>
+        <td>{{ item.Date }}</td>
+        <td>{{ item.Amount }}</td>
+      </tr>
+    </tbody>
+
+    <tbody></tbody>
   </table>
 </div>

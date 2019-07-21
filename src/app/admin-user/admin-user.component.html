@@ -3,30 +3,27 @@
 <!--Top Nav Bar-->
 
 <div class="nav-bar">
-    <a> NGO</a> 
+  <a> NGO</a>
 
   <div class="dropdown">
-      <a> Full Name(ADMIN)</a>
-      <a class="dropbtn" href="">Logout</a>
-  </div> 
+    <a> {{ user_info["user_full_name"] }} ( {{ user_info["user_role"] }} )</a>
+    <a class="dropbtn" href="">Logout</a>
+  </div>
 </div>
 
 <!---------------------------------------------------------------------->
 <!--Side Bar - Left -->
 <div class="side-bar">
-
-    <a routerLink="/user-mgmt" routerLinkActive="active">User Management</a>
-    <a routerLink="/donation-mgmt" routerLinkActive="active">Donation Management</a>
-    <a routerLink="/user-view" routerLinkActive="active">User View</a>
+  <a routerLink="./user-mgmt" routerLinkActive="active">User Management</a>
+  <a routerLink="./donation-mgmt" routerLinkActive="active"
+    >Donation Management</a
+  >
+  <!-- <a routerLink="./user-view" routerLinkActive="active">User View</a> -->
 </div>
 
 <!--Content Section-->
 <div class="content">
   <h1>Admin View</h1>
 
-  <div>
-    <router-outlet></router-outlet>  
-  </div>
-
+  <router-outlet></router-outlet>
 </div>
-

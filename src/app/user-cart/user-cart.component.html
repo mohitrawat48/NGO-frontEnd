@@ -35,12 +35,9 @@
   <tr>
     <td colspan="5" align="right"></td>
     <td>
-      <a
-        href=""
-        class="btn btn-warning btn-lg"
-        [routerLink]="['../order_confirm']"
-        ><b>Confirm Donation</b></a
-      >
+      <button class="btn btn-warning btn-lg" (click)="confirm_donation()">
+        <b>Confirm Donation</b>
+      </button>
     </td>
   </tr>
 </table>

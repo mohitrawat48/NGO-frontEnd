@@ -1,8 +1,10 @@
 import { Component, OnInit } from "@angular/core";
 import { ActivatedRoute } from "@angular/router";
-
 import { Item } from "../entities/item.entity";
 import { DonationService } from "../donation.service";
+import { DonateService } from "../donateservice";
+import { PassUserInfoService } from "../pass-user-info.service";
+import { Router } from "@angular/router";
 
 @Component({
   templateUrl: "user-cart.component.html",
@@ -10,14 +12,22 @@ import { DonationService } from "../donation.service";
 })
 export class UserCartComponent implements OnInit {
   public items: Item[] = [];
+  public user_info: any;
+  public donation_data: any = {};
   private total: number = 0;
 
   constructor(
     private activatedRoute: ActivatedRoute,
-    private donationService: DonationService
+    private donationService: DonationService,
+    private userinfoservice: PassUserInfoService,
+    private _donateService: DonateService,
+    private router: Router
   ) {}
 
   ngOnInit() {
+    //load user info
+    this.user_info = this.userinfoservice.fetch_data();
+
     this.activatedRoute.params.subscribe(params => {
       var id = params["id"];
       if (id) {
@@ -82,5 +92,16 @@ export class UserCartComponent implements OnInit {
     }
     localStorage.setItem("cart", JSON.stringify(cart));
     this.loadCart();
+  }
+
+  confirm_donation() {
+    this.donation_data["Name"] = this.user_info["user_full_name"];
+    this.donation_data["Amount"] = this.total;
+    this.donation_data["Date"] = new Date().toDateString();
+    this._donateService
+      .post_donation(this.donation_data)
+      .subscribe(data => console.log(data), error => console.log(error));
+
+    this.router.navigate(["/non-admin-user/order_confirm"]);
   }
 }

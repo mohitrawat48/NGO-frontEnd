@@ -18,7 +18,25 @@ const routes: Routes = [
   { path: "user-mgmt", component: UsermgmtComponent },
   { path: "donation-mgmt", component: DonationmgmtComponent },
   { path: "create", component: CreateComponent },
-  { path: "admin-user", component: AdminUserComponent },
+  {
+    path: "admin-user",
+    component: AdminUserComponent,
+    children: [
+      {
+        path: "",
+        redirectTo: "user-mgmt",
+        pathMatch: "full"
+      },
+      {
+        path: "donation-mgmt",
+        component: DonationmgmtComponent
+      },
+      {
+        path: "user-mgmt",
+        component: UsermgmtComponent
+      }
+    ]
+  },
   {
     path: "non-admin-user",
     component: NonAdminUserComponent,
