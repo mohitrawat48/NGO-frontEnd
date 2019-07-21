@@ -1,18 +1,22 @@
 <div class="content">
-  <table class="table" border="1">
-    <thead>
-      <th>Name</th>
-      <th>Date</th>
-      <th>Amount</th>
-    </thead>
-    <tbody>
-      <tr *ngFor="let item of donate">
-        <td>{{ item.Name }}</td>
-        <td>{{ item.Date }}</td>
-        <td>{{ item.Amount }}</td>
-      </tr>
-    </tbody>
+  <h1>Admin View</h1>
 
-    <tbody></tbody>
-  </table>
+  <div class="inner_content">
+    <table class="table" border="1">
+      <thead>
+        <th>Name</th>
+        <th>Date</th>
+        <th>Amount</th>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of donate">
+          <td>{{ item.Name }}</td>
+          <td>{{ item.Date }}</td>
+          <td>{{ item.Amount }}</td>
+        </tr>
+      </tbody>
+
+      <tbody></tbody>
+    </table>
+  </div>
 </div>

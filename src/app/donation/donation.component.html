@@ -1,86 +1,106 @@
-<h3>Donation Types</h3>
-<br />
-<div class="card" style="width: 18rem; float: left ">
-  <img
-    class="card-img-top"
-    src="../../../assets/images/photo1.jpg"
-    alt="Card
-  image cap"
-  />
-  <div class="card-body">
-    <h5 class="card-title">General Donation Fund</h5>
-    <p class="card-text">
-      Donation Amount : $90
-    </p>
-    <a
-      href="#"
-      class="btn btn-outline-info"
-      [routerLink]="['../cart', { id: 'd1' }]"
-      >Donate</a
-    >
-  </div>
-</div>
+<div class="content">
+  <h1>Make a Donation</h1>
+  <br />
 
-<div class="card" style="width: 18rem; float: left ; margin-left: 70px">
-  <img
-    class="card-img-top"
-    src="../../../assets/images/photo2.jpg"
-    alt="Card
-  image cap"
-  />
-  <div class="card-body">
-    <h5 class="card-title">Run For The Son</h5>
-    <p class="card-text">
-      Donation Amount : $100
-    </p>
-    <a
-      href="#"
-      class="btn btn-outline-info"
-      [routerLink]="['../cart', { id: 'd2' }]"
-      >Donate</a
-    >
-  </div>
-</div>
+  <div class="inner_content">
+    <div class="add_left_space">
+      <a [routerLink]="['../donations']" class="btn btn-secondary btn-lg"
+        >Donation Types</a
+      >
+      <a
+        [routerLink]="['../cart']"
+        class="btn btn-secondary btn-lg"
+        [ngStyle]="{ 'margin-left': '20px' }"
+        >Cart</a
+      >
+      <br /><br />
+    </div>
 
-<div class="card" style="width: 18rem; float: left ; margin-left: 70px">
-  <img
-    class="card-img-top"
-    src="../../../assets/images/photo3.jpg"
-    alt="Card
+    <h3>Donation Types</h3>
+    <br />
+    <div class="card" style="width: 18rem; float: left ">
+      <img
+        class="card-img-top"
+        src="../../../assets/images/photo1.jpg"
+        alt="Card
   image cap"
-  />
-  <div class="card-body">
-    <h5 class="card-title">Mission Trip Sponsorship</h5>
-    <p class="card-text">
-      Donation Amount : $70
-    </p>
-    <a
-      href="#"
-      class="btn btn-outline-info"
-      [routerLink]="['../cart', { id: 'd3' }]"
-      >Donate</a
-    >
-  </div>
-</div>
+      />
+      <div class="card-body">
+        <h5 class="card-title">General Donation Fund</h5>
+        <p class="card-text">
+          Donation Amount : $90
+        </p>
+        <a
+          href="#"
+          class="btn btn-outline-info"
+          [routerLink]="['../cart', { id: 'd1' }]"
+          >Donate</a
+        >
+      </div>
+    </div>
 
-<div class="card" style="width: 18rem; float: left ; margin-left: 70px">
-  <img
-    class="card-img-top"
-    src="../../../assets/images/photo4.jpg"
-    alt="Card
+    <div class="card" style="width: 18rem; float: left ; margin-left: 70px">
+      <img
+        class="card-img-top"
+        src="../../../assets/images/photo2.jpg"
+        alt="Card
   image cap"
-  />
-  <div class="card-body">
-    <h5 class="card-title">Memorial Gift</h5>
-    <p class="card-text">
-      Donation Amount : $120
-    </p>
-    <a
-      href="#"
-      class="btn btn-outline-info"
-      [routerLink]="['../cart', { id: 'd4' }]"
-      >Donate</a
-    >
+      />
+      <div class="card-body">
+        <h5 class="card-title">Run For The Son</h5>
+        <p class="card-text">
+          Donation Amount : $100
+        </p>
+        <a
+          href="#"
+          class="btn btn-outline-info"
+          [routerLink]="['../cart', { id: 'd2' }]"
+          >Donate</a
+        >
+      </div>
+    </div>
+
+    <div class="card" style="width: 18rem; float: left ; margin-left: 70px">
+      <img
+        class="card-img-top"
+        src="../../../assets/images/photo3.jpg"
+        alt="Card
+  image cap"
+      />
+      <div class="card-body">
+        <h5 class="card-title">Mission Trip Sponsorship</h5>
+        <p class="card-text">
+          Donation Amount : $70
+        </p>
+        <a
+          href="#"
+          class="btn btn-outline-info"
+          [routerLink]="['../cart', { id: 'd3' }]"
+          >Donate</a
+        >
+      </div>
+    </div>
+
+    <div class="card" style="width: 18rem; float: left ; margin-left: 70px">
+      <img
+        class="card-img-top"
+        src="../../../assets/images/photo4.jpg"
+        alt="Card
+  image cap"
+      />
+      <div class="card-body">
+        <h5 class="card-title">Memorial Gift</h5>
+        <p class="card-text">
+          Donation Amount : $120
+        </p>
+        <a
+          href="#"
+          class="btn btn-outline-info"
+          [routerLink]="['../cart', { id: 'd4' }]"
+          >Donate</a
+        >
+      </div>
+    </div>
   </div>
 </div>
 

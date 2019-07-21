@@ -16,22 +16,4 @@
   <h1>Welcome to NGO!</h1>
 </div>
 
-<!---------------------------Content Section--------------------------->
-<div class="content">
-  <h1>Make a Donation</h1>
-  <br />
-  <div class="add_left_space">
-    <a [routerLink]="['./donations']" class="btn btn-secondary btn-lg"
-      >Donation Types</a
-    >
-    <a
-      [routerLink]="['./cart']"
-      class="btn btn-secondary btn-lg"
-      [ngStyle]="{ 'margin-left': '20px' }"
-      >Cart</a
-    >
-    <br /><br />
-
-    <router-outlet></router-outlet>
-  </div>
-</div>
+<router-outlet></router-outlet>

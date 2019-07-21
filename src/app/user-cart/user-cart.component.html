@@ -1,43 +1,66 @@
-<h3>Cart Info</h3>
-<table border="1" width="75%">
-  <tr>
-    <th>Option</th>
-    <th style="display: none;">Id</th>
-    <th colspan="2">Event</th>
-    <th>Amount</th>
-    <th>Quantity</th>
-    <th>Sub Total</th>
-  </tr>
-  <tr *ngFor="let item of items">
-    <td align="center">
-      <a
-        [routerLink]="['/cart']"
-        class="btn btn-danger"
-        (click)="remove(item.donation.id)"
-        >Remove</a
-      >
-    </td>
-    <td style="display: none;">{{ item.donation.id }}</td>
-    <td>{{ item.donation.name }}</td>
-    <td>
-      <img src="../../../assets/images/{{ item.donation.photo }}" width="50" />
-    </td>
-    <td>{{ item.donation.amount }}</td>
-    <td>{{ item.quantity }}</td>
-    <!--Input type number then update data-->
-    <td>{{ item.donation.amount * item.quantity }}</td>
-  </tr>
-  <tr>
-    <td colspan="5" align="right">Total</td>
-    <td>{{ total }}</td>
-  </tr>
+<div class="content">
+  <h1>Make a Donation</h1>
+  <br />
 
-  <tr>
-    <td colspan="5" align="right"></td>
-    <td>
-      <button class="btn btn-warning btn-lg" (click)="confirm_donation()">
-        <b>Confirm Donation</b>
-      </button>
-    </td>
-  </tr>
-</table>
+  <div class="inner_content">
+    <div class="add_left_space">
+      <a [routerLink]="['../donations']" class="btn btn-secondary btn-lg"
+        >Donation Types</a
+      >
+      <a
+        [routerLink]="['../cart']"
+        class="btn btn-secondary btn-lg"
+        [ngStyle]="{ 'margin-left': '20px' }"
+        >Cart</a
+      >
+      <br /><br />
+    </div>
+
+    <h3>Cart Info</h3>
+
+    <table border="1" width="75%">
+      <tr>
+        <th>Option</th>
+        <th style="display: none;">Id</th>
+        <th colspan="2">Event</th>
+        <th>Amount</th>
+        <th>Quantity</th>
+        <th>Sub Total</th>
+      </tr>
+      <tr *ngFor="let item of items">
+        <td align="center">
+          <a
+            [routerLink]="['../cart']"
+            class="btn btn-danger"
+            (click)="remove(item.donation.id)"
+            >Remove</a
+          >
+        </td>
+        <td style="display: none;">{{ item.donation.id }}</td>
+        <td>{{ item.donation.name }}</td>
+        <td>
+          <img
+            src="../../../assets/images/{{ item.donation.photo }}"
+            width="50"
+          />
+        </td>
+        <td>{{ item.donation.amount }}</td>
+        <td>{{ item.quantity }}</td>
+        <!--Input type number then update data-->
+        <td>{{ item.donation.amount * item.quantity }}</td>
+      </tr>
+      <tr>
+        <td colspan="5" align="right">Total</td>
+        <td>{{ total }}</td>
+      </tr>
+      <tr>
+        <td colspan="5" align="right"></td>
+        <td>
+          <button class="btn btn-warning btn-lg" (click)="confirm_donation()">
+            <b>Confirm Donation</b>
+          </button>
+        </td>
+      </tr>
+    </table>
+  </div>
+</div>

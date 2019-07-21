@@ -15,15 +15,10 @@
 <!--Side Bar - Left -->
 <div class="side-bar">
   <a routerLink="./user-mgmt" routerLinkActive="active">User Management</a>
-  <a routerLink="./donation-mgmt" routerLinkActive="active"
-    >Donation Management</a
-  >
-  <!-- <a routerLink="./user-view" routerLinkActive="active">User View</a> -->
+  <a routerLink="./donation-mgmt" routerLinkActive="active">
+    Donation Management
+  </a>
+  <a routerLink="./donations" routerLinkActive="active">User View</a>
 </div>
 
-<!--Content Section-->
-<div class="content">
-  <h1>Admin View</h1>
-
-  <router-outlet></router-outlet>
-</div>
+<router-outlet></router-outlet>

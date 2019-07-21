@@ -34,6 +34,18 @@ const routes: Routes = [
       {
         path: "user-mgmt",
         component: UsermgmtComponent
+      },
+      {
+        path: "donations",
+        component: DonationComponent
+      },
+      {
+        path: "cart",
+        component: UserCartComponent
+      },
+      {
+        path: "order_confirm",
+        component: OrderConfirmComponent
       }
     ]
   },

@@ -1,46 +1,50 @@
-<a
-  routerLink="/create"
-  routerLinkActive="active"
-  class="btn btn-outline-primary btn-lg"
-  style="float : right ; margin-right: 10px"
-  >Create</a
->
-<br />
-<br />
-<br />
 <div class="content">
-  <table class="table" border="1">
-    <thead>
-      <th>First Name</th>
-      <th>Last Name</th>
-      <th>Email</th>
-      <th>Role</th>
-    </thead>
-    <tbody>
-      <tr *ngFor="let item of admin">
-        <td>{{ item.FirstName }}</td>
-        <td>{{ item.LastName }}</td>
-        <td>{{ item.Email }}</td>
-        <td>
-          {{ item.Role }}
-          &nbsp;
-          <a
-            routerLink="/edit"
-            routerLinkActive="active"
-            class="btn btn-outline-secondary"
-            >edit</a
-          >
-          &nbsp;
-          <a
-            routerLink="/delete"
-            routerLinkActive="active"
-            class="btn btn-outline-danger"
-            >delete</a
-          >
-        </td>
-      </tr>
-    </tbody>
+  <h1>Admin View</h1>
 
-    <tbody></tbody>
-  </table>
+  <a
+    routerLink="/create"
+    routerLinkActive="active"
+    class="btn btn-outline-primary btn-lg"
+    style="float : right ; margin-right: 10px"
+    >Create</a
+  >
+  <br />
+  <br />
+  <br />
+  <div class="inner_content">
+    <table class="table" border="1">
+      <thead>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Email</th>
+        <th>Role</th>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of admin">
+          <td>{{ item.FirstName }}</td>
+          <td>{{ item.LastName }}</td>
+          <td>{{ item.Email }}</td>
+          <td>
+            {{ item.Role }}
+            &nbsp;
+            <a
+              routerLink="/edit"
+              routerLinkActive="active"
+              class="btn btn-outline-secondary"
+              >edit</a
+            >
+            &nbsp;
+            <a
+              routerLink="/delete"
+              routerLinkActive="active"
+              class="btn btn-outline-danger"
+              >delete</a
+            >
+          </td>
+        </tr>
+      </tbody>
+
+      <tbody></tbody>
+    </table>
+  </div>
 </div>
