@@ -9,6 +9,8 @@ import { UserCartComponent } from "./user-cart/user-cart.component";
 import { AdminUserComponent } from "./admin-user/admin-user.component";
 import { NonAdminUserComponent } from "./non-admin-user/non-admin-user.component";
 import { DonationComponent } from "./donation/donation.component";
+import { OrderConfirmComponent } from "./order-confirm/order-confirm.component";
+
 const routes: Routes = [
   { path: "", redirectTo: "login", pathMatch: "full" },
   { path: "login", component: LoginComponent },
@@ -33,6 +35,10 @@ const routes: Routes = [
       {
         path: "cart",
         component: UserCartComponent
+      },
+      {
+        path: "order_confirm",
+        component: OrderConfirmComponent
       }
     ]
   }

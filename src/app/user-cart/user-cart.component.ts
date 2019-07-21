@@ -9,7 +9,7 @@ import { DonationService } from "../donation.service";
   styleUrls: ["./user-cart.component.css"]
 })
 export class UserCartComponent implements OnInit {
-  private items: Item[] = [];
+  public items: Item[] = [];
   private total: number = 0;
 
   constructor(
