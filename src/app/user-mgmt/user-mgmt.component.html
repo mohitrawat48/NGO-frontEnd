@@ -1,20 +1,43 @@
+<a
+  routerLink="/create"
+  routerLinkActive="active"
+  class="btn btn-outline-primary btn-lg"
+  style="float : right ; margin-right: 10px"
+  >Create</a
+>
+<br />
+<br />
+<br />
 <div class="content">
-  <table class="table">
+  <table class="table" border="1">
     <thead>
       <th>First Name</th>
       <th>Last Name</th>
       <th>Email</th>
       <th>Role</th>
-      <td><a routerLink="/create" routerLinkActive="active">create</a></td>
     </thead>
     <tbody>
       <tr *ngFor="let item of admin">
         <td>{{ item.FirstName }}</td>
         <td>{{ item.LastName }}</td>
         <td>{{ item.Email }}</td>
-        <td>{{ item.Role }}</td>
-        <td><a routerLink="/edit" routerLinkActive="active">edit</a></td>
-        <td><a routerLink="/delete" routerLinkActive="active">delete</a></td>
+        <td>
+          {{ item.Role }}
+          &nbsp;
+          <a
+            routerLink="/edit"
+            routerLinkActive="active"
+            class="btn btn-outline-secondary"
+            >edit</a
+          >
+          &nbsp;
+          <a
+            routerLink="/delete"
+            routerLinkActive="active"
+            class="btn btn-outline-danger"
+            >delete</a
+          >
+        </td>
       </tr>
     </tbody>
 
