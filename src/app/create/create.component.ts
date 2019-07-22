@@ -10,13 +10,18 @@ import { AdminService } from "./../adminservice";
 })
 export class CreateComponent implements OnInit {
   public newevent: any;
-  constructor(private _Service: AdminService, private fb: FormBuilder) {
+  constructor(
+    private _Service: AdminService,
+    private fb: FormBuilder,
+    private router: Router,
+    private activatedRoute: ActivatedRoute
+  ) {
     this.newevent = new FormGroup({
-      FirstName: new FormControl(""),
-      LastName: new FormControl(""),
-      Email: new FormControl(""),
-      Password: new FormControl(""),
-      Role: new FormControl("")
+      firstName: new FormControl(""),
+      lastName: new FormControl(""),
+      email: new FormControl(""),
+      password: new FormControl(""),
+      role: new FormControl("")
     });
   }
 
@@ -24,9 +29,13 @@ export class CreateComponent implements OnInit {
 
   onSubmit() {
     const result = this.newevent.value as Admin;
+    console.log(result);
     this._Service.postUser(result).subscribe(res => {
       // response from REST API call
       console.log(res);
+    });
+    this.router.navigate(["../user-mgmt"], {
+      relativeTo: this.activatedRoute
     });
   }
 }
