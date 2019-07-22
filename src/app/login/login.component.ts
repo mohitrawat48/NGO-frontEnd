@@ -23,8 +23,8 @@ export class LoginComponent implements OnInit {
     this.form_data["password"] = form_values["user_password"];
     this.Auth_service.signin(this.form_data).subscribe(
       data => {
-        console.log(data);
         this.userinfoservice.save_data(data["full_name"], data["user_type"]);
+        this.userinfoservice.log_in();
         if (data["user_type"] == "non-admin") {
           this.router.navigate(["/non-admin-user"]);
         } else {

@@ -10,17 +10,17 @@ import { AdminUserComponent } from "./admin-user/admin-user.component";
 import { NonAdminUserComponent } from "./non-admin-user/non-admin-user.component";
 import { DonationComponent } from "./donation/donation.component";
 import { OrderConfirmComponent } from "./order-confirm/order-confirm.component";
+import { AdminAuthGuard } from "./admin-auth.guard";
+import { NonadminAuthGuard } from "./nonadmin-auth.guard";
 
 const routes: Routes = [
   { path: "", redirectTo: "login", pathMatch: "full" },
   { path: "login", component: LoginComponent },
   { path: "register", component: RegisterComponent },
-  { path: "user-mgmt", component: UsermgmtComponent },
-  { path: "donation-mgmt", component: DonationmgmtComponent },
-  { path: "create", component: CreateComponent },
   {
     path: "admin-user",
     component: AdminUserComponent,
+    canActivate: [AdminAuthGuard],
     children: [
       {
         path: "",
@@ -35,6 +35,7 @@ const routes: Routes = [
         path: "user-mgmt",
         component: UsermgmtComponent
       },
+      { path: "create", component: CreateComponent },
       {
         path: "donations",
         component: DonationComponent
@@ -52,6 +53,7 @@ const routes: Routes = [
   {
     path: "non-admin-user",
     component: NonAdminUserComponent,
+    canActivate: [NonadminAuthGuard],
     children: [
       {
         path: "",
