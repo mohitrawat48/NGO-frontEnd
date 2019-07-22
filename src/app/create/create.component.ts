@@ -29,6 +29,7 @@ export class CreateComponent implements OnInit {
 
   onSubmit() {
     const result = this.newevent.value as Admin;
+    console.log(result);
     this._Service.postUser(result).subscribe(res => {
       console.log(res);
       this.router.navigate(["../user-mgmt"], {

@@ -24,6 +24,7 @@ import { DonationComponent } from "./donation/donation.component";
 import { DonationService } from "./donation.service";
 
 import { ReactiveFormsModule } from "@angular/forms";
+import { DeleteComponent } from './delete/delete.component';
 
 export function tokenGetter() {
   return localStorage.getItem("access_token");
@@ -41,7 +42,8 @@ export function tokenGetter() {
     UserCartComponent,
     OrderConfirmComponent,
     CreateComponent,
-    DonationComponent
+    DonationComponent,
+    DeleteComponent
   ],
   imports: [
     BrowserModule,
