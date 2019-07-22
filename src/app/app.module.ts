@@ -20,6 +20,7 @@ import { DonateService } from "./donateservice";
 import { AdminService } from "src/app/adminservice";
 import { CreateComponent } from "./create/create.component";
 import { DonationComponent } from "./donation/donation.component";
+import { Api_Resolver } from "./api_resolver.service";
 
 import { DonationService } from "./donation.service";
 
@@ -50,7 +51,7 @@ export function tokenGetter() {
     FormsModule,
     ReactiveFormsModule
   ],
-  providers: [AuthService, AdminService, DonateService, DonationService],
+  providers: [AuthService, AdminService, DonateService, DonationService, Api_Resolver],
   bootstrap: [AppComponent]
 })
 export class AppModule {}
