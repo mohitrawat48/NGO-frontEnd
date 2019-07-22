@@ -19,9 +19,12 @@
         <th>Last Name</th>
         <th>Email</th>
         <th>Role</th>
+        <th></th>
       </thead>
+
       <tbody>
         <tr *ngFor="let item of admin">
+            
             <td hidden>{{ item._id }}</td>
           <td>{{ item.FirstName }}</td>
           <td>{{ item.LastName }}</td>
@@ -30,7 +33,7 @@
             {{ item.Role }}</td>
             &nbsp;
             <a
-              routerLink="../edit"
+              routerLink="['/admin-user/edit',item._id]"
               routerLinkActive="active"
               class="btn btn-outline-secondary"
               >edit</a

@@ -33,5 +33,6 @@ export class DeleteComponent implements OnInit {
     this.router.navigate(["../user-mgmt"], {
       relativeTo: this.activatedRoute
     });
+    this.router.navigate(['/admin-user']);
   }
 }
