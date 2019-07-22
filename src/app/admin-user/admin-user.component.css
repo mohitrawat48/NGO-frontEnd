@@ -73,6 +73,10 @@
   background-color: darkred;
 }
 
+.side-bar a.active {
+  background-color: rgb(58, 199, 180);
+}
+
 /*Content Styles*/
 .content {
   background-color: white;
