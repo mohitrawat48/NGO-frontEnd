@@ -9,10 +9,8 @@ import { PassUserInfoService } from "../pass-user-info.service";
 })
 export class NonAdminUserComponent implements OnInit {
   private user_info: any;
-  constructor(
-    private userinfoservice: PassUserInfoService,
-    private router: Router
-  ) {}
+
+  constructor(private userinfoservice: PassUserInfoService, private router: Router) {}
 
   ngOnInit() {
     this.user_info = this.userinfoservice.fetch_data();
@@ -24,6 +22,7 @@ export class NonAdminUserComponent implements OnInit {
 
   log_out() {
     this.userinfoservice.log_out();
+    localStorage.removeItem("cart");
     this.router.navigate(["/login"]);
   }
 }

@@ -40,6 +40,7 @@ export class UserCartComponent implements OnInit {
           cart.push(JSON.stringify(item));
           localStorage.setItem("cart", JSON.stringify(cart));
         } else {
+          console.log("x2");
           let cart: any = JSON.parse(localStorage.getItem("cart"));
           let index: number = -1;
           for (var i = 0; i < cart.length; i++) {
@@ -102,8 +103,11 @@ export class UserCartComponent implements OnInit {
       .post_donation(this.donation_data)
       .subscribe(data => console.log(data), error => console.log(error));
 
+    localStorage.removeItem("cart");
+    
     this.router.navigate(["../order_confirm"], {
       relativeTo: this.activatedRoute
     });
   }
+  
 }
