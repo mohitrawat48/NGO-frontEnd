@@ -1,75 +1,77 @@
-import { NgModule } from "@angular/core";
-import { Routes, RouterModule } from "@angular/router";
-import { LoginComponent } from "./login/login.component";
-import { UsermgmtComponent } from "./user-mgmt/user-mgmt.component";
-import { DonationmgmtComponent } from "./donation-mgmt/donation-mgmt.component";
-import { CreateComponent } from "./create/create.component";
-import { RegisterComponent } from "./register/register.component";
-import { UserCartComponent } from "./user-cart/user-cart.component";
-import { AdminUserComponent } from "./admin-user/admin-user.component";
-import { NonAdminUserComponent } from "./non-admin-user/non-admin-user.component";
-import { DonationComponent } from "./donation/donation.component";
-import { OrderConfirmComponent } from "./order-confirm/order-confirm.component";
-import { AdminAuthGuard } from "./admin-auth.guard";
-import { NonadminAuthGuard } from "./nonadmin-auth.guard";
+import { NgModule } from '@angular/core';
+import { Routes, RouterModule } from '@angular/router';
+import { LoginComponent } from './login/login.component';
+import { UsermgmtComponent } from './user-mgmt/user-mgmt.component';
+import { DonationmgmtComponent } from './donation-mgmt/donation-mgmt.component';
+import { CreateComponent } from './create/create.component';
+import { RegisterComponent } from './register/register.component';
+import { UserCartComponent } from './user-cart/user-cart.component';
+import { AdminUserComponent } from './admin-user/admin-user.component';
+import { NonAdminUserComponent } from './non-admin-user/non-admin-user.component';
+import { DonationComponent } from './donation/donation.component';
+import { OrderConfirmComponent } from './order-confirm/order-confirm.component';
+import { AdminAuthGuard } from './admin-auth.guard';
+import { NonadminAuthGuard } from './nonadmin-auth.guard';
+import { DeleteComponent } from './delete/delete.component';
 
 const routes: Routes = [
-  { path: "", redirectTo: "login", pathMatch: "full" },
-  { path: "login", component: LoginComponent },
-  { path: "register", component: RegisterComponent },
+  { path: '', redirectTo: 'login', pathMatch: 'full' },
+  { path: 'login', component: LoginComponent },
+  { path: 'register', component: RegisterComponent },
   {
-    path: "admin-user",
+    path: 'admin-user',
     component: AdminUserComponent,
     canActivate: [AdminAuthGuard],
     children: [
       {
-        path: "",
-        redirectTo: "user-mgmt",
-        pathMatch: "full"
+        path: '',
+        redirectTo: 'user-mgmt',
+        pathMatch: 'full'
       },
       {
-        path: "donation-mgmt",
+        path: 'donation-mgmt',
         component: DonationmgmtComponent
       },
       {
-        path: "user-mgmt",
+        path: 'user-mgmt',
         component: UsermgmtComponent
       },
-      { path: "create", component: CreateComponent },
+      { path: 'create', component: CreateComponent },
+      { path: 'delete/:id', component: DeleteComponent },
       {
-        path: "donations",
+        path: 'donations',
         component: DonationComponent
       },
       {
-        path: "cart",
+        path: 'cart',
         component: UserCartComponent
       },
       {
-        path: "order_confirm",
+        path: 'order_confirm',
         component: OrderConfirmComponent
       }
     ]
   },
   {
-    path: "non-admin-user",
+    path: 'non-admin-user',
     component: NonAdminUserComponent,
     canActivate: [NonadminAuthGuard],
     children: [
       {
-        path: "",
-        redirectTo: "donations",
-        pathMatch: "full"
+        path: '',
+        redirectTo: 'donations',
+        pathMatch: 'full'
       },
       {
-        path: "donations",
+        path: 'donations',
         component: DonationComponent
       },
       {
-        path: "cart",
+        path: 'cart',
         component: UserCartComponent
       },
       {
-        path: "order_confirm",
+        path: 'order_confirm',
         component: OrderConfirmComponent
       }
     ]
@@ -84,5 +86,6 @@ export class AppRoutingModule {}
 export const routingCompoents = [
   UsermgmtComponent,
   DonationmgmtComponent,
-  CreateComponent
+  CreateComponent,
+  DeleteComponent
 ];

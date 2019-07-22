@@ -14,6 +14,7 @@
   <div class="inner_content">
     <table class="table" border="1">
       <thead>
+        <th hidden>ID</th>
         <th>First Name</th>
         <th>Last Name</th>
         <th>Email</th>
@@ -21,26 +22,27 @@
       </thead>
       <tbody>
         <tr *ngFor="let item of admin">
+            <td hidden>{{ item._id }}</td>
           <td>{{ item.FirstName }}</td>
           <td>{{ item.LastName }}</td>
           <td>{{ item.Email }}</td>
           <td>
-            {{ item.Role }}
+            {{ item.Role }}</td>
             &nbsp;
             <a
-              routerLink="/edit"
+              routerLink="../edit"
               routerLinkActive="active"
               class="btn btn-outline-secondary"
               >edit</a
             >
             &nbsp;
             <a
-              routerLink="/delete"
+              [routerLink]="['/admin-user/delete',item._id]"
               routerLinkActive="active"
               class="btn btn-outline-danger"
               >delete</a
             >
-          </td>
+          
         </tr>
       </tbody>
 

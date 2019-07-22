@@ -1,0 +1,15 @@
+<div class="content">
+<p>If you want delete this user information</p>
+<form novalidate (ngSubmit)="onSubmit()">
+    <div>
+    <button class="btn btn-primary">Yes</button>
+    <button class="btn btn-primary" [routerLink]="['/admin-user/']">No</button>
+    </div>
+
+</form>
+
+<div *ngIf="delete">
+    text
+</div>
+
+</div>

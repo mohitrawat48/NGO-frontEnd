@@ -15,7 +15,7 @@ const httpOptions = {
   providedIn: "root"
 })
 export class AdminService {
-  private _url: string = "http://localhost:3000/api/user";
+  private _url: string = "http://localhost:3000/api/user/";
   constructor(private http: HttpClient) {}
 
   getdetail(): Observable<Admin[]> {
@@ -39,6 +39,7 @@ export class AdminService {
   }
 
   deleteUser(id: string): Observable<Admin[]> {
+    console.log('ID>>'+id);
     return this.http.delete<Admin[]>(this._url + id).pipe(catchError(this.errorHandler));
   }
   errorHandler(error: HttpErrorResponse) {
