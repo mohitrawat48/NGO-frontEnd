@@ -106,4 +106,5 @@ export class UserCartComponent implements OnInit {
       relativeTo: this.activatedRoute
     });
   }
+  
 }
