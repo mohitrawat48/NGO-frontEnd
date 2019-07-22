@@ -42,3 +42,7 @@ h5 {
   margin-top: 5%;
   margin-left: 27%;
 }
+
+.card img {
+  height: 50%;
+}
