@@ -1,6 +1,5 @@
 import { Component, OnInit } from "@angular/core";
 import { AdminService } from "./../adminservice";
-
 @Component({
   selector: "app-user-mgmt",
   templateUrl: "./user-mgmt.component.html",

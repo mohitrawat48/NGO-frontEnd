@@ -30,11 +30,10 @@ export class CreateComponent implements OnInit {
   onSubmit() {
     const result = this.newevent.value as Admin;
     this._Service.postUser(result).subscribe(res => {
-      // response from REST API call
       console.log(res);
-    });
-    this.router.navigate(["../user-mgmt"], {
-      relativeTo: this.activatedRoute
+      this.router.navigate(["../user-mgmt"], {
+        relativeTo: this.activatedRoute
+      });
     });
   }
 }

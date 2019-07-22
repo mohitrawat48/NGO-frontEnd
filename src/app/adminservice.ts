@@ -28,7 +28,7 @@ export class AdminService {
         this._url,
         {
           FirstName: user["firstName"],
-          LastName: user["fastName"],
+          LastName: user["lastName"],
           Email: user["email"],
           Password: user["password"],
           Role: user["role"]
