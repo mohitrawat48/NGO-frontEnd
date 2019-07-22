@@ -12,19 +12,11 @@ export class CreateComponent implements OnInit {
   public newevent: any;
   constructor(private _Service: AdminService, private fb: FormBuilder) {
     this.newevent = new FormGroup({
-<<<<<<< HEAD
       FirstName: new FormControl(""),
       LastName: new FormControl(""),
       Email: new FormControl(""),
+      Password: new FormControl(""),
       Role: new FormControl("")
-=======
-      FirstName: new FormControl(''),
-      LastName: new FormControl(''),
-      Email : new FormControl(''),
-      Password: new FormControl(''),
-      Role: new FormControl('')
-
->>>>>>> 2734adc8deafdb4dfcb0a592c4ab68693bd8cd11
     });
   }
 

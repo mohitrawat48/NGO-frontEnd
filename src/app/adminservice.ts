@@ -25,15 +25,10 @@ export class AdminService {
       .pipe(catchError(this.errorHandler));
   }
 
-<<<<<<< HEAD
+  deleteUser(id: string): Observable<Admin[]> {
+    return this.http.delete<Admin[]>(this._url + id).pipe(catchError(this.errorHandler));
+  }
   errorHandler(error: HttpErrorResponse) {
-=======
-      deleteUser(id: string): Observable<Admin[]> {
-        return this.http.delete<Admin[]>(this._url + id)
-        .pipe(catchError(this.errorHandler));
-      }
-  errorHandler(error: HttpErrorResponse){
->>>>>>> 2734adc8deafdb4dfcb0a592c4ab68693bd8cd11
     return throwError(error.message || "Server Error");
   }
 }
