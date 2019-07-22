@@ -25,3 +25,24 @@ td {
 .inner_content {
   margin-left: 5%;
 }
+
+h5 {
+  font-size: 16px;
+  text-align: center;
+}
+
+.card p {
+  font-size: 14px;
+  text-align: center;
+}
+
+.card a {
+  text-align: center;
+  display: inline-block;
+  margin-top: 5%;
+  margin-left: 27%;
+}
+
+.card img {
+  height: 50%;
+}
