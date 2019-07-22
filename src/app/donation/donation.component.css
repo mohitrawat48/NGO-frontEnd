@@ -40,9 +40,10 @@ h5 {
   text-align: center;
   display: inline-block;
   margin-top: 5%;
-  margin-left: 27%;
+  margin-left: 27.5%;
 }
 
 .card img {
   height: 50%;
+  max-height: 50%;
 }
