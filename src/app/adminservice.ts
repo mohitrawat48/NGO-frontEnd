@@ -27,6 +27,10 @@ export class AdminService {
         .pipe(catchError(this.errorHandler));
       }
 
+      deleteUser(id: string): Observable<Admin[]> {
+        return this.http.delete<Admin[]>(this._url + id)
+        .pipe(catchError(this.errorHandler));
+      }
   errorHandler(error: HttpErrorResponse){
     return throwError(error.message || "Server Error");
   }
