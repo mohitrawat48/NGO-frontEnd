@@ -103,6 +103,8 @@ export class UserCartComponent implements OnInit {
       .post_donation(this.donation_data)
       .subscribe(data => console.log(data), error => console.log(error));
 
+    localStorage.removeItem("cart");
+    
     this.router.navigate(["../order_confirm"], {
       relativeTo: this.activatedRoute
     });
