@@ -4,6 +4,7 @@ import { login_model } from "./login_model";
 import { Observable, throwError } from "rxjs";
 import { catchError } from "rxjs/operators";
 import { HttpHeaders } from "@angular/common/http";
+import { Register } from "./register";
 
 const httpOptions = {
   headers: new HttpHeaders({
@@ -20,9 +21,9 @@ export class AuthService {
 
   constructor(private http: HttpClient) {}
 
-  signup(new_user: login_model): Observable<login_model> {
+  signup(new_user: Register): Observable<Register> {
     return this.http
-      .post<login_model>(this.signup_url, new_user, httpOptions)
+      .post<Register>(this.signup_url, new_user, httpOptions)
       .pipe(catchError(this.signup_errorHandler));
   }
 

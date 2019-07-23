@@ -17,8 +17,10 @@ export class RegisterComponent implements OnInit {
 
   onSubmit(form_values: any) {
     console.log(form_values);
-    this.reg_data["email"] = form_values["reg_email"];
-    this.reg_data["password"] = form_values["reg_password"];
+    this.reg_data["Email"] = form_values["reg_email"];
+    this.reg_data["Password"] = form_values["reg_password"];
+    this.reg_data["FirstName"] = form_values["reg_first_name"];
+    this.reg_data["LastName"] = form_values["reg_last_name"];
     this.Auth_service.signup(this.reg_data).subscribe(
       data => {
         this.message = "Successfully Created Your Account !";
