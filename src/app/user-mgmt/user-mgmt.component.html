@@ -19,33 +19,32 @@
         <th>Last Name</th>
         <th>Email</th>
         <th>Role</th>
-        <th></th>
+        <th>Edit / Delete</th>
       </thead>
 
       <tbody>
         <tr *ngFor="let item of admin">
-            
-            <td hidden>{{ item._id }}</td>
+          <td hidden>{{ item._id }}</td>
           <td>{{ item.FirstName }}</td>
           <td>{{ item.LastName }}</td>
           <td>{{ item.Email }}</td>
           <td>
-            {{ item.Role }}</td>
-            &nbsp;
-            <a
-              routerLink="['/admin-user/edit',item._id]"
-              routerLinkActive="active"
-              class="btn btn-outline-secondary"
-              >edit</a
-            >
-            &nbsp;
-            <a
-              [routerLink]="['/admin-user/delete',item._id]"
-              routerLinkActive="active"
-              class="btn btn-outline-danger"
-              >delete</a
-            >
-          
+            {{ item.Role }}
+          </td>
+          &nbsp;
+          <a
+            routerLink="['/admin-user/edit',item._id]"
+            routerLinkActive="active"
+            class="btn btn-outline-secondary"
+            >edit</a
+          >
+          &nbsp;
+          <a
+            (click)="delete_user(item._id)"
+            routerLinkActive="active"
+            class="btn btn-outline-danger"
+            >delete</a
+          >
         </tr>
       </tbody>
 
