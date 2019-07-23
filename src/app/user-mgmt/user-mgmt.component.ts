@@ -23,10 +23,9 @@ export class UsermgmtComponent implements OnInit {
   load_admin() {
     this._adminService.getdetail().subscribe(data => (this.admin = data));
   }
-  delete_user(id: string) {
-    this._adminService.deleteUser(id).subscribe(data => {
-      this.load_admin();
-    });
+  delete_user(item) {
+    this.userinfoservice.save_item(item);
+    this.router.navigate(["/admin-user/delete"]);
   }
   edit_user(item) {
     this.userinfoservice.save_item(item);

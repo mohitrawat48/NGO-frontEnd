@@ -39,7 +39,7 @@ const routes: Routes = [
       },
       { path: "create", component: CreateComponent },
       { path: "edit", component: EditComponent },
-      { path: "delete/:id", component: DeleteComponent },
+      { path: "delete", component: DeleteComponent },
       {
         path: "donations",
         component: DonationComponent
