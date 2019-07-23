@@ -45,14 +45,14 @@
             width="50"
           />
         </td>
-        <td>{{ item.donation.amount }}</td>
+        <td>${{ item.donation.amount }}</td>
         <td>{{ item.quantity }}</td>
         <!--Input type number then update data-->
-        <td>{{ item.donation.amount * item.quantity }}</td>
+        <td>${{ item.donation.amount * item.quantity }}</td>
       </tr>
       <tr>
         <td colspan="5" align="right">Total</td>
-        <td>{{ total }}</td>
+        <td>${{ total }}</td>
       </tr>
       <tr>
         <td colspan="5" align="right"></td>
