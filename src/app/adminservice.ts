@@ -39,19 +39,25 @@ export class AdminService {
   }
 
   deleteUser(id: string): Observable<Admin[]> {
-    console.log('ID>>'+id);
+    console.log("ID>>" + id);
     return this.http.delete<Admin[]>(this._url + id).pipe(catchError(this.errorHandler));
   }
   errorHandler(error: HttpErrorResponse) {
     return throwError(error.message || "Server Error");
   }
-   
-putUserByID(id:string, user:object):Observable<Admin[]> {
-  return this.http.put<Admin[]>(this._url+id, user)
-  .pipe(catchError(this.errorHandler));
-}
-geteventByID(id?:string): Observable<any>{
-  return this.http.get<Admin[]>(this._url+id)
-  .pipe(catchError(this.errorHandler));
-}
+
+  putUserByID(id: string, user: object): Observable<Admin[]> {
+    return this.http
+      .put<Admin[]>(this._url + id, {
+        FirstName: user["firstName"],
+        LastName: user["lastName"],
+        Email: user["email"],
+        Password: user["password"],
+        Role: user["role"]
+      })
+      .pipe(catchError(this.errorHandler));
+  }
+  geteventByID(id?: string): Observable<any> {
+    return this.http.get<Admin[]>(this._url + id).pipe(catchError(this.errorHandler));
+  }
 }

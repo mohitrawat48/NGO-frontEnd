@@ -7,6 +7,7 @@ export class PassUserInfoService {
   private user_full_name: string = "_user_full_name";
   private user_role: string = "_user_role";
   private user_info: any = {};
+  private user_item: any = {};
   constructor() {}
 
   save_data(full_name: string, role: string) {
@@ -19,9 +20,7 @@ export class PassUserInfoService {
   }
 
   fetch_data(): any {
-    this.user_info["user_full_name"] = localStorage.getItem(
-      this.user_full_name
-    );
+    this.user_info["user_full_name"] = localStorage.getItem(this.user_full_name);
     this.user_info["user_role"] = localStorage.getItem(this.user_role);
     return this.user_info;
   }
@@ -36,5 +35,13 @@ export class PassUserInfoService {
 
   log_out() {
     localStorage.setItem("logged_in", "false");
+  }
+
+  save_item(item) {
+    this.user_item = item;
+  }
+
+  fetch_item() {
+    return this.user_item;
   }
 }
