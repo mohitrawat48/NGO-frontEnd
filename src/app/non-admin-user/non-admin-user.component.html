@@ -1,0 +1,19 @@
+<!--User View-->
+<!---------------------------Nav Bar--------------------------->
+
+<div class="nav-bar">
+  <a> NGO</a>
+
+  <div class="dropdown">
+    <a> {{ user_info["user_full_name"] }} ( {{ user_info["user_role"] }} ) </a>
+    <a class="dropbtn" (click)="log_out()">Logout</a>
+  </div>
+</div>
+
+<!---------------------------Side Bar--------------------------->
+
+<div class="side-bar">
+  <h1>Welcome to NGO!</h1>
+</div>
+
+<router-outlet></router-outlet>

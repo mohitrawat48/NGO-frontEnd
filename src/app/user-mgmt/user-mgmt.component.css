@@ -1,0 +1,93 @@
+.nav-bar {
+  width: 100%;
+  background-color: #555;
+  overflow: auto;
+  margin-bottom: 10px;
+}
+
+.nav-bar a {
+  float: left;
+  padding: 12px;
+  font-family: "Segoe UI", Arial, sans-serif;
+  color: white;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+@media screen and (max-width: 500px) {
+  .nav-bar a {
+    float: none;
+    display: block;
+  }
+}
+/*---------------------Logout Styles-----------------------------*/
+.dropbtn {
+  background-color: darkred;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropbtn:hover,
+.dropbtn:focus {
+  background-color: #ddd;
+}
+
+.dropdown {
+  float: right;
+  position: relative;
+  display: block;
+}
+
+.dropbtn a:hover {
+  background-color: #ddd;
+}
+
+/*-------------------------------------------------*/
+/*Side Bar Styles*/
+.side-bar {
+  background-color: lightgray;
+  color: black;
+  width: 15%;
+  height: 100%;
+  float: left;
+  position: fixed;
+}
+
+.side-bar a {
+  background-color: transparent;
+  color: inherit;
+  font-family: "Segoe UI", Arial, sans-serif;
+  text-decoration: none;
+  display: block;
+  padding: 2px 1px 1px 16px;
+}
+
+.side-bar a:hover {
+  background-color: gray;
+}
+
+.side-bar a:active {
+  background-color: darkred;
+}
+
+/*Content Styles*/
+.content {
+  background-color: white;
+  color: black;
+  width: 85%;
+  margin-left: 15%;
+  position: fixed;
+}
+
+.content h1 {
+  background: lightgray;
+  padding-left: 10px;
+}
+
+.inner_content {
+  margin-left: 5%;
+  width: 90%;
+}

@@ -1,0 +1,24 @@
+<!--Admin View-->
+
+<!--Top Nav Bar-->
+
+<div class="nav-bar">
+  <a> NGO</a>
+
+  <div class="dropdown">
+    <a> {{ user_info["user_full_name"] }} ( {{ user_info["user_role"] }} )</a>
+    <a class="dropbtn" (click)="log_out()">Logout</a>
+  </div>
+</div>
+
+<!---------------------------------------------------------------------->
+<!--Side Bar - Left -->
+<div class="side-bar">
+  <a routerLink="./user-mgmt" routerLinkActive="active">User Management</a>
+  <a routerLink="./donation-mgmt" routerLinkActive="active">
+    Donation Management
+  </a>
+  <a routerLink="./donations" routerLinkActive="active">User View</a>
+</div>
+
+<router-outlet></router-outlet>

@@ -1,0 +1,27 @@
+<form #Register_form="ngForm" (ngSubmit)="onSubmit(Register_form.value)">
+  <div class="containment">
+    <h1>Welcome to NGO Register</h1>
+    <img src="https://www.ngoreferencemodel.org/img/logo.png" />
+
+    <div class="formSec">
+      <label for="first_name">First Name:</label>
+      <input type="text" id="first_name" name="reg_first_name" ngModel />
+
+      <label for="last_name"> Last Name: </label>
+      <input type="text" id="last_name" name="reg_last_name" ngModel />
+
+      <label for="email">Email: </label>
+      <input type="text" id="email" name="reg_email" ngModel />
+
+      <label for="password"> Password: </label>
+      <input type="text" id="password" name="reg_password" ngModel />
+    </div>
+
+    <br />
+
+    <input type="submit" class="btn btn-dark" value="Register" />
+    <br />
+    <p>{{ message }}</p>
+    <a routerLink="/login" class="my_link">Already have an account? Login</a>
+  </div>
+</form>

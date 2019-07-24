@@ -1,0 +1,54 @@
+<div class="content">
+  <h1>User Management</h1>
+
+  <a
+    routerLink="../create"
+    routerLinkActive="active"
+    class="btn btn-outline-primary btn-lg"
+    style="float : right ; margin-right: 70px"
+    >Create</a
+  >
+  <br />
+  <br />
+  <br />
+  <div class="inner_content">
+    <table class="table" border="1">
+      <thead>
+        <th hidden>ID</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Email</th>
+        <th>Role</th>
+        <th>Edit / Delete</th>
+      </thead>
+
+      <tbody>
+        <tr *ngFor="let item of admin">
+          <td hidden>{{ item._id }}</td>
+          <td>{{ item.FirstName }}</td>
+          <td>{{ item.LastName }}</td>
+          <td>{{ item.Email }}</td>
+          <td>
+            {{ item.Role }}
+          </td>
+          &nbsp;
+          <a
+            (click)="edit_user(item)"
+            routerLinkActive="active"
+            class="btn btn-outline-secondary"
+            >edit</a
+          >
+          &nbsp;
+          <a
+            (click)="delete_user(item)"
+            routerLinkActive="active"
+            class="btn btn-outline-danger"
+            >delete</a
+          >
+        </tr>
+      </tbody>
+
+      <tbody></tbody>
+    </table>
+  </div>
+</div>
